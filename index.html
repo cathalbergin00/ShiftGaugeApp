@@ -83,6 +83,17 @@
           <span class="brand-mark" aria-hidden="true">SG</span>
           <span class="brand-name">ShiftGauge</span>
         </a>
+        <button
+          class="mobile-nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav-panel"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav aria-label="Primary Navigation">
           <ul class="nav-links">
             <li><a href="#why">Why</a></li>
@@ -94,6 +105,26 @@
           </ul>
         </nav>
       </div>
+      <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" hidden></div>
+      <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="#why" data-mobile-nav-link>Why</a></li>
+          <li><a href="#features" data-mobile-nav-link>Features</a></li>
+          <li><a href="#screenshots" data-mobile-nav-link>Screenshots</a></li>
+          <li><a href="#trust" data-mobile-nav-link>Trust</a></li>
+          <li><a href="#faq" data-mobile-nav-link>FAQ</a></li>
+          <li>
+            <a
+              class="btn btn-primary track-cta"
+              href="{{APP_STORE_URL}}"
+              data-cta-location="mobile-nav"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-mobile-nav-link
+            >Download on the App Store</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main-content">
@@ -378,6 +409,14 @@
       </form>
       <img id="lightbox-image" src="" alt="Expanded ShiftGauge screenshot" />
     </dialog>
+
+    <a
+      class="mobile-sticky-cta track-cta"
+      href="{{APP_STORE_URL}}"
+      data-cta-location="mobile-sticky"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Download on the App Store</a>
 
     <script src="script.js" defer></script>
   </body>
