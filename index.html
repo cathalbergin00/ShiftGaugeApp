@@ -18,6 +18,54 @@
     <meta property="og:image" content="{{SCREENSHOT_1}}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#090f1e" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is ShiftGauge a payroll provider?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. ShiftGauge is a planning tool that helps you forecast and track pay periods. Final payroll is determined by your employer payroll system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ShiftGauge work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Core planning workflows are available offline, and data is stored on-device by default."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does estimate calibration work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can compare estimate assumptions with actual paycheck outcomes. ShiftGauge uses those outcomes to improve estimate alignment over time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can ShiftGauge handle overtime and side jobs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ShiftGauge supports overtime, comp time, and side-job tracking so different earning streams can be planned together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I read privacy and support info?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the resources section for direct links to the App Store listing, privacy policy, and support guide."
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,6 +89,7 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#screenshots">Screenshots</a></li>
             <li><a href="#trust">Trust</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a class="nav-cta" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">App Store</a></li>
           </ul>
         </nav>
@@ -98,6 +147,21 @@
           <p>Fire and rescue</p>
           <p>Law enforcement</p>
           <p>Shift-heavy operations</p>
+        </div>
+
+        <div class="container conversion-strip" aria-label="Conversion trust signals">
+          <article class="conversion-item">
+            <h3>No account setup friction</h3>
+            <p>Install, configure your pay cycle, and start forecasting immediately.</p>
+          </article>
+          <article class="conversion-item">
+            <h3>Private by default</h3>
+            <p>Local-first data handling with core workflows available offline.</p>
+          </article>
+          <article class="conversion-item">
+            <h3>Built for real payroll variance</h3>
+            <p>Calibration improves confidence as actual check results are recorded.</p>
+          </article>
         </div>
       </section>
 
@@ -231,6 +295,37 @@
         </div>
       </section>
 
+      <section class="section faq" id="faq">
+        <div class="container faq-grid">
+          <div class="faq-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions people ask before they commit.</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Is ShiftGauge a payroll provider?</summary>
+              <p>No. ShiftGauge is a planning tool. Final payroll values still come from your employer payroll system.</p>
+            </details>
+            <details>
+              <summary>Does ShiftGauge work offline?</summary>
+              <p>Yes. Core planning workflows are available offline, with local-first storage by default.</p>
+            </details>
+            <details>
+              <summary>How does estimate calibration work?</summary>
+              <p>As you log actual paycheck outcomes, ShiftGauge can better align estimates to your real-world pay patterns.</p>
+            </details>
+            <details>
+              <summary>Can I track overtime, comp, and side jobs?</summary>
+              <p>Yes. You can capture multiple earning streams and review them together by pay period.</p>
+            </details>
+            <details>
+              <summary>Where do I find privacy and support details?</summary>
+              <p>Use the resources section below for direct links to privacy policy and support documentation.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="section resources" id="resources">
         <div class="container resources-grid">
           <div>
@@ -261,6 +356,8 @@
         </ul>
       </div>
     </footer>
+
+    <a class="mobile-cta" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">Get ShiftGauge on the App Store</a>
 
     <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
       <form method="dialog" class="lightbox-topbar">
