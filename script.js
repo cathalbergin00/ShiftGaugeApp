@@ -8,6 +8,19 @@ const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
 const mobileNavLinks = document.querySelectorAll("[data-mobile-nav-link]");
 
 let lastFocusElement = null;
+const MOBILE_NAV_MAX_WIDTH = 900;
+
+function getViewportBucket(width) {
+  if (width <= 700) {
+    return "phone";
+  }
+
+  if (width <= MOBILE_NAV_MAX_WIDTH) {
+    return "small_tablet";
+  }
+
+  return "desktop";
+}
 
 function setMobileNavOpen(isOpen) {
   if (!mobileNavToggle || !mobileNavPanel || !mobileNavBackdrop) {
@@ -55,14 +68,22 @@ if (mobileNavToggle && mobileNavPanel && mobileNavBackdrop) {
       }
     }
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > MOBILE_NAV_MAX_WIDTH) {
+      setMobileNavOpen(false);
+    }
+  });
 }
 
 function trackCtaClick(location) {
+  const viewportWidth = window.innerWidth || 0;
   const payload = {
     event_category: "conversion",
     event_label: location,
     cta_location: location,
-    viewport_width: window.innerWidth || 0,
+    viewport_width: viewportWidth,
+    viewport_bucket: getViewportBucket(viewportWidth),
   };
 
   if (typeof window.gtag === "function") {
