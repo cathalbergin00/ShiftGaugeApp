@@ -28,7 +28,7 @@
             "name": "How does estimate calibration work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ShiftGauge estimates net pay from gross period earnings minus configured deductions and taxes. When actual checks are logged, calibration updates effective rates so recurring holiday pay and shift differentials are reflected more accurately over time."
+              "text": "We estimate take-home from period earnings, taxes, and deductions, then tune using real checks. Recurring holiday pay and differentials are folded into effective rates over time."
             }
           },
           {
@@ -90,7 +90,7 @@
             <li><a href="#screenshots">Screenshots</a></li>
             <li><a href="#trust">Trust</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a class="nav-cta" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">App Store</a></li>
+            <li><a class="nav-cta track-cta" href="{{APP_STORE_URL}}" data-cta-location="nav" target="_blank" rel="noopener noreferrer">Download</a></li>
           </ul>
         </nav>
       </div>
@@ -102,16 +102,16 @@
         <div class="container hero-grid">
           <div class="hero-copy-wrap">
             <p class="eyebrow">Built for shift-based pay reality</p>
-            <h1>Know your paycheck path before the period closes.</h1>
+            <h1>See your next paycheck before payday.</h1>
             <p class="lede">
-              ShiftGauge gives shift workers clear pay-period visibility, smarter estimate calibration,
-              and goal pacing without spreadsheet overhead.
+              Forecast your pay-period take-home, calibrate from real checks, and track certification
+              renewals in one place.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">Get it on the App Store</a>
-              <a class="btn btn-ghost" href="#screenshots">Explore screenshots</a>
+              <a class="btn btn-primary track-cta" href="{{APP_STORE_URL}}" data-cta-location="hero-primary" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+              <a class="btn btn-ghost" href="#screenshots">See how it works</a>
             </div>
-            <p class="hero-note">Trusted by planners in EMS, healthcare, and first responder roles.</p>
+            <p class="hero-note">No account required • Works offline • Local-first data</p>
           </div>
 
           <div class="hero-visual" aria-label="ShiftGauge hero visual">
@@ -139,21 +139,13 @@
           </div>
         </div>
 
-        <div class="container role-strip" aria-label="Target audiences">
-          <p>EMS crews</p>
-          <p>Hospital teams</p>
-          <p>Fire and rescue</p>
-          <p>Law enforcement</p>
-          <p>Rotating shift workers</p>
-        </div>
-
         <div class="container conversion-strip" aria-label="Why users install quickly">
           <article>
-            <h3>Fast setup</h3>
-            <p>Start forecasting by pay period in minutes.</p>
+            <h3>No account setup</h3>
+            <p>Install, set your pay cycle, and start forecasting quickly.</p>
           </article>
           <article>
-            <h3>Private by default</h3>
+            <h3>Private and offline</h3>
             <p>Local-first storage with core offline workflows.</p>
           </article>
           <article>
@@ -182,22 +174,39 @@
         </div>
       </section>
 
+      <section class="section section-audience" id="audience">
+        <div class="container">
+          <p class="eyebrow">Built for teams</p>
+          <div class="role-strip" aria-label="Target audiences">
+            <p>EMS crews</p>
+            <p>Hospital teams</p>
+            <p>Fire and rescue</p>
+            <p>Law enforcement</p>
+            <p>Rotating shift workers</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-feature" id="features">
         <div class="container">
           <p class="eyebrow">Feature pillars</p>
           <h2>Purpose-built for pay-period planning.</h2>
           <div class="feature-rows">
             <article class="feature-row">
-              <h3>Pay-period aware math</h3>
-              <p>Estimate and review earnings inside true payroll boundaries, not generic calendar slices.</p>
+              <h3>Calibration from real checks</h3>
+              <p>Use actual paycheck outcomes to improve estimate alignment and confidence over time.</p>
             </article>
             <article class="feature-row">
               <h3>OT, comp, and side-job tracking</h3>
               <p>Track multiple earning streams together while preserving context for each type of shift.</p>
             </article>
             <article class="feature-row">
-              <h3>Calibration from real checks</h3>
-              <p>Use actual paycheck outcomes to improve estimate alignment and confidence over time.</p>
+              <h3>Certification tracking</h3>
+              <p>Track certifications, expiration windows, and renewal timing in the same operational workspace.</p>
+            </article>
+            <article class="feature-row">
+              <h3>Pay-period aware math</h3>
+              <p>Estimate and review earnings inside true payroll boundaries, not generic calendar slices.</p>
             </article>
             <article class="feature-row">
               <h3>Goals and pacing</h3>
@@ -211,11 +220,18 @@
               <h3>Widgets and reminders</h3>
               <p>Keep planning-critical numbers visible during busy weeks without opening full workflows.</p>
             </article>
-            <article class="feature-row">
-              <h3>Certification tracking</h3>
-              <p>Track certifications, expiration windows, and renewal timing in the same operational workspace.</p>
-            </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-inline-cta" aria-label="Primary call to action">
+        <div class="container inline-cta-card">
+          <div>
+            <p class="eyebrow">Ready To Plan</p>
+            <h2>Plan your next pay cycle with fewer surprises.</h2>
+            <p class="inline-cta-text">Get a clearer take-home forecast before the period closes.</p>
+          </div>
+          <a class="btn btn-primary track-cta" href="{{APP_STORE_URL}}" data-cta-location="mid-page" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
         </div>
       </section>
 
@@ -225,22 +241,28 @@
           <h2>A practical view of each planning layer.</h2>
           <div class="gallery" role="list">
             <figure class="shot" role="listitem">
-              <button class="shot-button" type="button" data-full="{{SCREENSHOT_1}}" data-caption="Period snapshot keeps upcoming payout visibility front and center.">
+              <button class="shot-button" type="button" data-full="{{SCREENSHOT_1}}" data-caption="Step 1: Forecast. Period snapshot keeps upcoming payout visibility front and center.">
                 <img src="{{SCREENSHOT_1}}" alt="ShiftGauge dashboard with current pay period estimate" loading="lazy" />
               </button>
-              <figcaption>Period snapshot keeps upcoming payout visibility front and center.</figcaption>
+              <figcaption><span class="shot-step">Step 1: Forecast</span> Period snapshot keeps upcoming payout visibility front and center.</figcaption>
+            </figure>
+            <figure class="shot" role="listitem">
+              <button class="shot-button" type="button" data-full="{{SCREENSHOT_3}}" data-caption="Step 2: Calibrate. Compare estimate assumptions with real paycheck outcomes.">
+                <img src="{{SCREENSHOT_3}}" alt="Calibration view comparing estimates to actual paycheck values" loading="lazy" />
+              </button>
+              <figcaption><span class="shot-step">Step 2: Calibrate</span> Compare estimate assumptions with real paycheck outcomes.</figcaption>
+            </figure>
+            <figure class="shot" role="listitem">
+              <button class="shot-button" type="button" data-full="{{SCREENSHOT_6}}" data-caption="Step 3: Stay compliant. Reminders keep key deadlines and planning signals visible.">
+                <img src="{{SCREENSHOT_6}}" alt="ShiftGauge reminders and planning signals view" loading="lazy" />
+              </button>
+              <figcaption><span class="shot-step">Step 3: Stay compliant</span> Reminders keep key deadlines and planning signals visible.</figcaption>
             </figure>
             <figure class="shot" role="listitem">
               <button class="shot-button" type="button" data-full="{{SCREENSHOT_2}}" data-caption="Entry flows show overtime, comp, and side work in one timeline.">
                 <img src="{{SCREENSHOT_2}}" alt="Shift entry view with overtime and side-job context" loading="lazy" />
               </button>
               <figcaption>Entry flows show overtime, comp, and side work in one timeline.</figcaption>
-            </figure>
-            <figure class="shot" role="listitem">
-              <button class="shot-button" type="button" data-full="{{SCREENSHOT_3}}" data-caption="Calibration tightens confidence based on real payroll outcomes.">
-                <img src="{{SCREENSHOT_3}}" alt="Calibration view comparing estimates to actual paycheck values" loading="lazy" />
-              </button>
-              <figcaption>Calibration tightens confidence based on real payroll outcomes.</figcaption>
             </figure>
             <figure class="shot" role="listitem">
               <button class="shot-button" type="button" data-full="{{SCREENSHOT_4}}" data-caption="Goal pacing converts big targets into realistic period checkpoints.">
@@ -253,12 +275,6 @@
                 <img src="{{SCREENSHOT_5}}" alt="Reports and export summary in ShiftGauge" loading="lazy" />
               </button>
               <figcaption>Reports and exports keep records clean when sharing outside the app.</figcaption>
-            </figure>
-            <figure class="shot" role="listitem">
-              <button class="shot-button" type="button" data-full="{{SCREENSHOT_6}}" data-caption="Widgets and reminders keep key planning signals visible all week.">
-                <img src="{{SCREENSHOT_6}}" alt="ShiftGauge widget and reminder examples" loading="lazy" />
-              </button>
-              <figcaption>Widgets and reminders keep key planning signals visible all week.</figcaption>
             </figure>
           </div>
         </div>
@@ -276,7 +292,7 @@
           </article>
           <article>
             <h3>Calibration improves over time</h3>
-            <p>As you record actual check outcomes, estimate alignment improves and forecast confidence strengthens.</p>
+            <p>As you record actual check outcomes, estimate alignment improves and forecast confidence strengthens. Estimate logic remains transparent and editable for rates, deductions, and differentials.</p>
           </article>
           <article>
             <h3>Practical planning disclaimer</h3>
@@ -294,7 +310,7 @@
           <div class="faq-list">
             <details>
               <summary>How does estimate calibration work?</summary>
-              <p>ShiftGauge estimates net pay from gross period earnings, then subtracts configured deductions and taxes. When you log real checks, calibration adjusts effective rates so recurring holiday pay and differentials are better reflected in future estimates.</p>
+              <p>We estimate take-home from period earnings, taxes, and deductions, then tune using real checks. Recurring holiday pay and differentials are folded into effective rates over time.</p>
             </details>
             <details>
               <summary>Can I track overtime, comp, and side jobs?</summary>
@@ -323,13 +339,13 @@
             <h2>Review details, then start planning with confidence.</h2>
           </div>
           <div class="resource-list" role="list">
-            <a role="listitem" class="resource-link" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">Open App Store listing</a>
+            <a role="listitem" class="resource-link track-cta" href="{{APP_STORE_URL}}" data-cta-location="resources-link" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
             <a role="listitem" class="resource-link" href="{{GIST_PRIVACY_URL}}" target="_blank" rel="noopener noreferrer">Read privacy policy</a>
             <a role="listitem" class="resource-link" href="{{GIST_SUPPORT_URL}}" target="_blank" rel="noopener noreferrer">Support and help guide</a>
           </div>
           <div class="resource-cta">
             <h3>Get paycheck clarity before your next cycle closes.</h3>
-            <a class="btn btn-primary" href="{{APP_STORE_URL}}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+            <a class="btn btn-primary track-cta" href="{{APP_STORE_URL}}" data-cta-location="resources-primary" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
           </div>
         </div>
       </section>
