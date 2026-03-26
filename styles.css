@@ -176,6 +176,28 @@ img {
   align-items: stretch;
 }
 
+.hero-visual {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.hero-preview {
+  margin: 0;
+  border-radius: var(--radius-xl);
+  padding: 0.5rem;
+  background: linear-gradient(170deg, #fdfefe, #edf4fd);
+  border: 1px solid rgba(122, 147, 183, 0.34);
+  box-shadow: var(--soft-shadow);
+}
+
+.hero-preview img {
+  width: 100%;
+  border-radius: calc(var(--radius-xl) - 8px);
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  max-height: 26rem;
+}
+
 .hero-copy-wrap h1 {
   font-size: clamp(2.1rem, 7vw, 4.2rem);
   max-width: 13ch;
