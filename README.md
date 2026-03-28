@@ -1,31 +1,40 @@
-# ShiftGaugeApp Pages
+# ShiftGauge Pages
 
-Static marketing landing page for ShiftGauge, optimized for GitHub Pages.
+Static marketing site for ShiftGauge, deployed via GitHub Pages.
 
-## Files
+## Site files
 
-- `index.html`: page structure, copy, metadata, and placeholder tokens
-- `styles.css`: responsive styling and visual system
-- `script.js`: lightweight screenshot lightbox behavior
+- `index.html`: main landing page
+- `privacy.html`: privacy policy page
+- `support.html`: support/help page
+- `styles.css`: shared styling across all pages
+- `script.js`: lightbox, mobile nav, CTA tracking behavior
+- `robots.txt`: crawler policy
+- `sitemap.xml`: crawl discovery index
+- `CNAME`: custom domain (`shiftgauge.app`)
 
-## Placeholder tokens to update
+## Assets
 
-Edit `index.html` and replace:
-
-- `{{APP_STORE_URL}}`
-- `{{GIST_PRIVACY_URL}}`
-- `{{GIST_SUPPORT_URL}}`
-- `{{SCREENSHOT_1}}` ... `{{SCREENSHOT_6}}` (or extend to more)
+- `assets/screenshots/`: landing screenshots
+- `assets/screenshots/hero-pay-period-mobile.png`: mobile-only hero source image
+- `assets/brand/app-icon-1024.png`: app icon used for brand mark and favicon/touch icon
 
 ## Updating screenshots
 
-1. Add image files to the repo (for example in `assets/screenshots/`).
-2. Update each `src` and `data-full` value in the screenshot gallery in `index.html`.
-3. Keep meaningful `alt` text and user-outcome captions for accessibility and conversion clarity.
+1. Replace files in `assets/screenshots/`.
+2. Update corresponding `src` and `data-full` values in `index.html`.
+3. Preserve accurate `alt` text and outcome-focused captions.
+
+## Updating resources
+
+- Privacy link points to `privacy.html`.
+- Support link points to `support.html`.
+- App Store CTA links point to:
+  `https://apps.apple.com/us/app/shiftgauge-ot-pay-tracker/id6761068149`
 
 ## Local preview
 
-From the repo root, run:
+Run from repo root:
 
 ```bash
 python3 -m http.server 8080
@@ -35,11 +44,11 @@ Then open `http://localhost:8080`.
 
 ## Deployment (GitHub Pages)
 
-This repo is intended to deploy directly from `main` root.
+Deploy from branch:
 
 1. GitHub repo -> Settings -> Pages
 2. Source: `Deploy from a branch`
 3. Branch: `main`
 4. Folder: `/ (root)`
 
-Pushes to `main` will trigger a new Pages deployment.
+Custom domain is configured through `CNAME` as `shiftgauge.app`.
