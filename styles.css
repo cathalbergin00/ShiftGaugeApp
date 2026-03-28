@@ -946,10 +946,10 @@ body.mobile-nav-open .mobile-sticky-cta {
   }
 
   .hero-preview img {
-    max-height: 22rem;
-    aspect-ratio: 704 / 1060;
+    max-height: 20rem;
+    aspect-ratio: 9 / 19.5;
     object-fit: cover;
-    object-position: 50% 68%;
+    object-position: 50% 50%;
   }
 
   .hero-visual {
