@@ -6,6 +6,9 @@ const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
 const mobileNavPanel = document.getElementById("mobile-nav-panel");
 const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
 const mobileNavLinks = document.querySelectorAll("[data-mobile-nav-link]");
+const mobileStickyCta = document.querySelector(".mobile-sticky-cta");
+const heroSection = document.querySelector(".hero");
+const resourcesSection = document.getElementById("resources");
 
 let lastFocusElement = null;
 const MOBILE_NAV_MAX_WIDTH = 900;
@@ -32,6 +35,7 @@ function setMobileNavOpen(isOpen) {
   mobileNavPanel.hidden = !isOpen;
   mobileNavBackdrop.hidden = !isOpen;
   document.body.classList.toggle("mobile-nav-open", isOpen);
+  updateMobileStickyCtaVisibility();
 
   if (isOpen) {
     const firstLink = mobileNavPanel.querySelector("a");
@@ -41,6 +45,31 @@ function setMobileNavOpen(isOpen) {
   } else if (lastFocusElement instanceof HTMLElement) {
     lastFocusElement.focus();
   }
+}
+
+function isPhoneViewport() {
+  return window.matchMedia("(max-width: 700px)").matches;
+}
+
+function updateMobileStickyCtaVisibility() {
+  if (!mobileStickyCta) {
+    return;
+  }
+
+  const navOpen = document.body.classList.contains("mobile-nav-open");
+  if (!isPhoneViewport()) {
+    mobileStickyCta.classList.add("is-hidden");
+    return;
+  }
+
+  const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+  const pastHeroThreshold = window.scrollY > Math.max(220, heroHeight * 0.33);
+  const resourcesNearViewport = resourcesSection
+    ? resourcesSection.getBoundingClientRect().top < window.innerHeight * 0.9
+    : false;
+
+  const shouldHide = navOpen || !pastHeroThreshold || resourcesNearViewport;
+  mobileStickyCta.classList.toggle("is-hidden", shouldHide);
 }
 
 if (mobileNavToggle && mobileNavPanel && mobileNavBackdrop) {
@@ -73,8 +102,13 @@ if (mobileNavToggle && mobileNavPanel && mobileNavBackdrop) {
     if (window.innerWidth > MOBILE_NAV_MAX_WIDTH) {
       setMobileNavOpen(false);
     }
+    updateMobileStickyCtaVisibility();
   });
 }
+
+window.addEventListener("scroll", updateMobileStickyCtaVisibility, { passive: true });
+window.addEventListener("resize", updateMobileStickyCtaVisibility);
+window.addEventListener("load", updateMobileStickyCtaVisibility);
 
 function trackCtaClick(location) {
   const viewportWidth = window.innerWidth || 0;
