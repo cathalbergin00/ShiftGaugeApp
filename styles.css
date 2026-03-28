@@ -946,8 +946,10 @@ body.mobile-nav-open .mobile-sticky-cta {
   }
 
   .hero-preview img {
-    max-height: 19.2rem;
-    object-position: 50% 34%;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: 50% 0%;
   }
 
   .hero-visual {
